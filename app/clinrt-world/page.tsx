@@ -159,7 +159,7 @@ const contentByTab: Record<Tab, TabContent> = {
         summary:
           "ClinRT Global marked World Environment Day through an environment photography challenge.",
         meta: "4 photos",
-        coverImage: "/images/clinrt-moments/environment-day-1.jpg",
+        coverImage: "/images/clinrt-moments/environment-cover.jpg",
         linkedinPostUrl:
           "https://www.linkedin.com/posts/clinrt-global-services_worldenvironmentday2026-clinrtglobal-environmentphotographychallenge-activity-7468982448316575744-q7Y7",
         momentImages: [
@@ -187,7 +187,7 @@ const contentByTab: Record<Tab, TabContent> = {
         summary:
           "ClinRT Global joined the global call against child labour and supported awareness for a safer future.",
         meta: "8 photos",
-        coverImage: "/images/clinrt-moments/child-labour-1.jpg",
+        coverImage: "/images/clinrt-moments/child-cover.jpg",
         linkedinPostUrl:
           "https://www.linkedin.com/posts/clinrt-global-services_worlddayagainstchildlabour-redcardtochildlabour-activity-7473694852887515136-uXOU",
         momentImages: [
