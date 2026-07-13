@@ -33,37 +33,43 @@ export const homeResearchFields = deepFreeze([
     title: "Precision Randomization & Treatment Control",
     description:
       "Balanced allocation across arms and cohorts, with safeguarded emergency unblinding.",
-    image: "/images/Precision Randomization & Treatment Control_compressed.webp",
+    image:
+      "/images/Precision Randomization & Treatment Control_compressed.webp",
   },
   {
     title: "Integrated IP Supply & Kit Operations",
     description:
       "Unified oversight of inventory, resupply, kit assignment, expiry, transfers, and temperature mapping.",
-    image: "/images/Integrated IP Supply & Kit Operations_compressed.webp",
+    image:
+      "/images/Integrated IP Supply & Kit Operations_compressed.webp",
   },
   {
     title: "Full Chain of Custody Accountability",
     description:
       "Complete traceability of every kit from creation to final reconciliation and destruction.",
-    image: "/images/Full Chain of Custody Accountability_compressed.webp",
+    image:
+      "/images/Full Chain of Custody Accountability_compressed.webp",
   },
   {
-    title: " Streamlined Participant & Visit Workflow",
+    title: "Streamlined Participant & Visit Workflow",
     description:
       "Protocol aligned configuration for screening, enrolment, and visit execution across all sites.",
-    image: "/images/Streamlined Participant & Visit Workflow_compressed.webp",
+    image:
+      "/images/Streamlined Participant & Visit Workflow_compressed.webp",
   },
   {
     title: "Real Time Operational Intelligence",
     description:
       "Dynamic dashboards, detailed reports, and event driven alerts for confident oversight.",
-    image: "/images/Real Time Operational Intelligence_compressed.webp",
+    image:
+      "/images/Real Time Operational Intelligence_compressed.webp",
   },
   {
     title: "Compliance Ready, Connected, and Scalable",
     description:
       "Aligned with global regulations and seamlessly integrated with CTMS/EDC for multi region, multi phase trials.",
-    image: "/images/Compliance Ready, Connected, and Scalable_compressed.webp",
+    image:
+      "/images/Compliance Ready, Connected, and Scalable_compressed.webp",
   },
 ] as const);
 
@@ -97,37 +103,20 @@ export const homePosterItems = deepFreeze([
     image: "/images/poster1.webp",
     href: "/what-we-build",
   },
-    {
+  {
     title: "",
     tag: "Launch",
     image: "/images/poster2.webp",
     href: "/what-we-build",
   },
-
 ] as const);
 
 export const homeNewsItems = deepFreeze([
   {
-    title: "iClinRT is now live",
-    date: "Mar 2026",
-    description:
-      "ClinRT's Interactive Response Technology platform.",
-    ctas: [
-      {
-        label: "Read launch update",
-        href: "/whats-new?tab=News#content-hub",
-      },
-      {
-        label: "Explore iClinRT",
-        href: "/iclinrt",
-      },
-    ],
-  },
-  {
     title: "We're Hiring – Full Stack Developer",
     date: "Now Hiring",
     description:
-      "We’re looking for a Full Stack Developer to join ClinRT® and help build technology that powers efficient, compliant, and reliable clinical trials.\n\nThe ideal candidate brings strong experience in Angular, .NET Core, C#, ASP.NET Core, SQL Server, REST APIs, Git, Azure deployments, cloud environments, and modern development practices.\n\nThis role is for someone who enjoys solving real-world problems, working with collaborative teams, and building systems that support the future of clinical research.\n\nExperience Required: 5+ years.\n\nApply now by sending your resume to hr@clinrtglobal.com\nSubject: Full Stack Developer Application – Your Name.",
+      "Join ClinRT® as a Full Stack Developer and help build reliable technology for global clinical trials.\n\nWe’re looking for a developer with 5+ years of experience in Angular, .NET Core, C#, ASP.NET Core, SQL Server, REST APIs, Git, Azure, and cloud deployments.\n\nSend your resume to hr@clinrtglobal.com\nSubject: Full Stack Developer Application – Your Name.",
     ctas: [
       {
         label: "Apply Now",
@@ -136,6 +125,37 @@ export const homeNewsItems = deepFreeze([
       {
         label: "View LinkedIn Post",
         href: "https://www.linkedin.com/posts/clinrt-global-services_clinrt-hiring-fullstackdeveloper-activity-7480877230752071682-y17i?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE3ZUBkBvO74r1gCnZvIef3OOrwCEvUYLl8",
+      },
+    ],
+  },
+  {
+    title: "We're Hiring – Quality Assurance Manager",
+    date: "Now Hiring",
+    description:
+      "ClinRT® is looking for a Quality Assurance Manager to lead compliance, validation, audits, CAPAs, and quality oversight for global IRT/RTSM systems.\n\nThe ideal candidate has 5+ years of experience in Clinical Research, Quality Assurance, Clinical Systems, or CSV, with strong knowledge of GxP, GAMP 5, 21 CFR Part 11, Annex 11, and ICH-GCP.\n\nSend your resume to hr@clinrtglobal.com\nSubject: QA Manager Application – Your Name.",
+    ctas: [
+      {
+        label: "Apply Now",
+        href: "mailto:hr@clinrtglobal.com?subject=QA%20Manager%20Application%20%E2%80%93%20Your%20Name",
+      },
+      {
+        label: "View LinkedIn Post",
+        href: "https://www.linkedin.com/posts/clinrt-global-services_we-are-hiring-quality-assurance-manager-activity-7480557340455325697-GuIH?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE3ZUBkBvO74r1gCnZvIef3OOrwCEvUYLl8",
+      },
+    ],
+  },
+  {
+    title: "iClinRT is now live",
+    date: "Mar 2026",
+    description: "ClinRT's Interactive Response Technology platform.",
+    ctas: [
+      {
+        label: "Read launch update",
+        href: "/whats-new?tab=News#content-hub",
+      },
+      {
+        label: "Explore iClinRT",
+        href: "/iclinrt",
       },
     ],
   },
