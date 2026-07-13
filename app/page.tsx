@@ -15,7 +15,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { FaqModal } from "@/components/FaqModal";
-import { FiArrowRight, FiChevronDown } from "react-icons/fi";
+import { FiArrowRight } from "react-icons/fi";
 import {
   FaFlask,
   FaCogs,
@@ -196,7 +196,7 @@ export default function HomePage() {
           <div className="pointer-events-none absolute inset-x-10 top-0 h-px bg-linear-to-r from-transparent via-white/90 to-transparent" />
           <div className="pointer-events-none absolute inset-x-10 bottom-0 h-px bg-linear-to-r from-transparent via-slate-200/80 to-transparent" />
 
-          <div className="relative grid gap-5 items-start lg:grid-cols-[2fr_1fr] lg:items-stretch">
+          <div className="relative grid items-start gap-5 lg:grid-cols-[2fr_1fr]">
             {/* <div className="flex h-full min-h-80 flex-col rounded-[1.75rem] border border-white/80 bg-white/1 p-3 shadow-[0_18px_50px_rgba(15,23,42,0.06)] backdrop-blur-sm sm:p-4"> */}
             <GlassSlider
               items={posterItems}
@@ -238,7 +238,16 @@ export default function HomePage() {
             />
             {/* </div> */}
 
-            <aside className="flex min-h-[32rem] flex-col rounded-[1.75rem] border border-orange-400/80 bg-white/72 p-5 text-slate-900 shadow-[0_18px_50px_rgba(15,23,42,0.06)] backdrop-blur-sm sm:min-h-[34rem] lg:min-h-[42rem] lg:p-7">
+            <motion.aside
+              layout
+              transition={{
+                layout: {
+                  duration: 0.32,
+                  ease: [0.22, 1, 0.36, 1],
+                },
+              }}
+              className="flex h-auto flex-col rounded-[1.75rem] border border-orange-400/80 bg-white/72 p-5 text-slate-900 shadow-[0_18px_50px_rgba(15,23,42,0.06)] backdrop-blur-sm lg:p-7"
+            >
               <SectionBadge
                 className="bg-white/80 text-slate-900"
                 borderClassName="border border-orange-200"
@@ -246,17 +255,7 @@ export default function HomePage() {
                 News & Updates
               </SectionBadge>
 
-              <div className="relative mt-5 min-h-0 flex-1 space-y-3 overflow-y-auto pb-12 pr-2 no-scrollbar sm:mt-6 sm:space-y-4 sm:pb-10">
-                <div
-                  className="pointer-events-none absolute inset-x-0 bottom-0 h-14 bg-linear-to-t from-white via-white/85 to-transparent"
-                  aria-hidden="true"
-                />
-                <div
-                  className="pointer-events-none absolute bottom-3 left-1/2 flex h-8 w-8 -translate-x-1/2 items-center justify-center rounded-full border border-slate-200 bg-white/95 text-slate-700 shadow-sm animate-bounce"
-                  aria-hidden="true"
-                >
-                  <FiChevronDown className="h-4 w-4 text-orange-500" />
-                </div>
+              <div className="relative mt-5 space-y-3 sm:mt-6 sm:space-y-4">
                 {newsItems.map((item, index) => {
                   const isOpen = previewNewsIndex === index;
 
@@ -333,28 +332,35 @@ export default function HomePage() {
                             className="overflow-hidden"
                           >
                             <div className="mt-4 border-t border-slate-200/80 pt-4">
-                              <p className="text-sm leading-6 text-slate-600">
+                              <p className="whitespace-pre-line text-sm leading-6 text-slate-600">
                                 {item.description}
                               </p>
                               <div className="mt-4 flex flex-wrap gap-3">
-  {item.ctas.map((cta) => {
-    const isExternal =
-      cta.href.startsWith("http") || cta.href.startsWith("mailto:");
+                                {item.ctas.map((cta) => {
+                                  const isExternal =
+                                    cta.href.startsWith("http") ||
+                                    cta.href.startsWith("mailto:");
 
-    return (
-      <Link
-        key={cta.label}
-        href={cta.href}
-        target={isExternal ? "_blank" : undefined}
-        rel={isExternal ? "noopener noreferrer" : undefined}
-        className="inline-flex items-center gap-2 text-sm font-semibold text-orange-600 transition hover:text-orange-700"
-      >
-        <span>{cta.label}</span>
-        <FiArrowRight className="h-4 w-4" />
-      </Link>
-    );
-  })}
-</div>
+                                  return (
+                                    <Link
+                                      key={cta.label}
+                                      href={cta.href}
+                                      target={
+                                        isExternal ? "_blank" : undefined
+                                      }
+                                      rel={
+                                        isExternal
+                                          ? "noopener noreferrer"
+                                          : undefined
+                                      }
+                                      className="inline-flex items-center gap-2 text-sm font-semibold text-orange-600 transition hover:text-orange-700"
+                                    >
+                                      <span>{cta.label}</span>
+                                      <FiArrowRight className="h-4 w-4" />
+                                    </Link>
+                                  );
+                                })}
+                              </div>
                             </div>
                           </motion.div>
                         ) : null}
@@ -363,7 +369,7 @@ export default function HomePage() {
                   );
                 })}
               </div>
-            </aside>
+            </motion.aside>
           </div>
         </div>
       </SectionWrapper>
