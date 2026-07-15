@@ -113,6 +113,22 @@ export const homePosterItems = deepFreeze([
 
 export const homeNewsItems = deepFreeze([
   {
+    title: "We're Hiring – Junior Technical Architect",
+    date: "Now Hiring",
+    description:
+      "Join the ClinRT team in Pune as a Junior Technical Architect and help build secure, scalable, and reliable web solutions.\n\nWe’re looking for a professional with 5+ years of experience in .NET Core, C#, Web API, Angular 10+, SQL Server, microservices, Git, and CI/CD tools such as Azure DevOps or Jenkins.\n\nExperience with Microsoft Azure, Agile/Scrum, and authentication practices is an added advantage.\n\nSend your resume to [hr@clinrtglobal.com](mailto:hr@clinrtglobal.com)\nSubject: Junior Technical Architect Application – Your Name.",
+    ctas: [
+      {
+        label: "Apply Now",
+        href: "mailto:hr@clinrtglobal.com?subject=Junior%20Technical%20Architect%20Application%20%E2%80%93%20Your%20Name",
+      },
+      {
+        label: "View LinkedIn Post",
+        href: "https://www.linkedin.com/posts/were-looking-for-a-skilled-and-proactive-share-7482726675571478528-MDKg/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE3ZUBkBvO74r1gCnZvIef3OOrwCEvUYLl8",
+      },
+    ],
+  },
+  {
     title: "We're Hiring – Full Stack Developer",
     date: "Now Hiring",
     description:
